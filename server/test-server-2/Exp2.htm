@@ -1,0 +1,35 @@
+
+<html>
+    <head> <title>Эксперимент №2</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById("canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+        
+        ctx.beginPath();
+        ctx.moveTo(20,20);
+        ctx.bezierCurveTo(20,100,200,100,200,20);
+        
+        ctx.bezierCurveTo(200,200,250,250,300,320);
+    
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(100,75,50,0,2*Math.PI);
+        ctx.stroke();
+      }
+    }
+  </script>
+
+</head>
+
+    <body  onload="draw();"> <h1>Эксперимент №2</h1>
+
+<canvas  width=600 height=400 id="canvas" style="background-color: #F0F0FF;border: 4px double black;" ></canvas>
+<br><A HREF = "/">Назад</A>
+    </body>
+
+</html>

@@ -1,0 +1,73 @@
+html, body {
+    background-color: rgb(196, 196, 196);
+}
+
+.canvas {
+    display: block;
+    border: solid 1px;
+	width : 800px;
+	height : 600px;
+}
+
+
+ g#graphic {
+    color: red;
+    stroke: #0d00ff;
+ }
+ g#xGreed {
+   stroke: darkblue;
+   stroke-width: 1px;
+   stroke-opacity: 0.1;
+ }
+ 
+ 
+ g#yGreed {
+   stroke:darkblue;
+   stroke-width: 1px;
+   stroke-opacity: 0.1
+ }
+g#xAxe {
+  stroke: darkred;
+  stroke-width: 1px;
+
+}
+g#yAxe {
+  stroke: darkred;
+  stroke-width: 1px;
+
+}
+g#redGraph {
+  stroke: red;
+  stroke-width: 2px;
+}
+g#redGraph:hover {
+  stroke-width: 4px;
+}
+g#blueGraph {
+  stroke: blue;
+  stroke-width: 2px;
+}
+g#blueGraph:hover {
+  stroke-width: 4px;
+}
+
+g#greenGraph {
+  stroke:green;
+  stroke-width: 2px;
+}
+
+g#greenGraph:hover {
+  stroke-width: 4px;
+}
+
+.small {
+  font-size: 30px;
+  fill: black;
+  stroke: none;
+  opacity: 0.5;
+}
+
+.small:hover {
+  font-size: 45px;  
+  font-weight: bold;
+}

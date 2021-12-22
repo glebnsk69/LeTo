@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document111</title>
+</head>
+<style>
+    
+    div{
+        float:left;
+        width:150px;
+        height: 100px;
+        border:1px solid black;
+        text-align: center;
+        vertical-align: middle;
+        
+        }
+    div#btn1 { background-color: darkgrey;  }
+    div#btn2 { background-color: darkkhaki; }
+    div#btn3 { background-color: rgb(186, 240, 186); }
+</style>
+<body>
+    <div class="box" id="btn1" onclick="genArray()">
+        Generate Array
+    </div>
+    <div  class="box" id = "btn2" onclick="printArray()">
+        Print Array
+    </div>
+    <div class="box" id = "btn3" onclick="testObj()">
+         Object
+    </div>
+</body>
+</html>
+
+<script>
+    let x = new XMLHttpRequest()
+    
+    var Val = {
+            max:0,
+            min:0,
+            val:[],
+        }
+
+    function testObj() {
+        console.log("testObj")
+        
+        Val.max = 100
+        Val.min = -100
+        Val.val.push([10,110])
+        Val.val.push([20,120])
+        Val.val.push([30,130])
+        console.log(Val)
+        console.log('======================')
+        Val.val.forEach(function (val) {
+            console.log(val[0],val[1])            
+        })
+    }
+    tempObj = {
+        max:1,
+        min:-1,
+        val:[0,0],
+    }
+
+    temp = []
+
+    let t,y1,y2
+    function addData2(y1,y2) {
+        mydt = [y1,y2]
+        max = tempObj.max
+        min = tempObj.min
+        tempObj.val.push(mydt)
+//        console.log(max,min,y1,y2)
+    }
+    function addData(myArray,t,y1,y2) {
+        if(myArray.length==0) {
+            myArray.push([t,y1,y2])
+            myArray.push([t,y1,y2])
+        }
+        else {
+            // myArray[0][1] - max [2] min
+            if(myArray[0][1]>y1) {myArray[0][1]=y1}
+            if(myArray[0][2]<y1) {myArray[0][2]=y1}
+            myArray.push(t,y1,y2)
+        }
+       
+    }
+    function genArray(){
+        console.log("generate array");
+        
+        for(let i=0;i<36;i++) {
+            t=i*0.0174533;
+            y1=Math.sin(t);
+            y2=Math.cos(t);
+        //    if(y1>(temp[0])[1]) temp[0][1] = y1;
+        //    if(y2<(temp[0])[2])  temp[0][2] = y1;
+//            temp.push([t,y1,y2])
+            addData2(temp,t,y1,y2);
+        }
+        console.log(temp);
+    }
+
+    function printArray() {
+        console.log("print array");
+        console.log(temp.length)
+        console.log(tempObj.max,tempObj.min,tempObj.val)
+/*
+        for(i=0;i<temp.length;i++){
+            console.log(i,temp[i]);
+        }
+        
+        temp.forEach(function (item,index,array) {
+            console.log(array[index][1],index,)            
+        })
+
+        y1=temp[10]
+        console.log(y1[0],y1[1],y1[2])
+        console.log('==>',temp[4][1])
+*/
+
+    }
+</script>
