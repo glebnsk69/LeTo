@@ -2,7 +2,7 @@
 import gc
 #import network
 import mywifi
-import termohttp3
+#import termohttp3
 
 #sta_if = network.WLAN(network.STA_IF);
 #sta_if.active(True)
