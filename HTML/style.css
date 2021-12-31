@@ -1,0 +1,12 @@
+div {
+    background-color: cadetblue;
+    border-radius: 10px;
+    border: solid 2px black;
+    padding: 10px;
+}
+div.err {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: brown;   
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
