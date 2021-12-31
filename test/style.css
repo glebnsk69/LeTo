@@ -1,0 +1,49 @@
+body {
+    background-color: dimgray;
+}
+
+div {
+    font-size: larger;
+    width: 25%;
+    border: 2px;
+    border-color: blue;
+    border-radius: 10px;
+    background-color: aqua;
+    padding: 10px;
+}
+
+.redbox {
+    position: f;
+    left: 120px;
+    background-color: red;
+    width: 30%;
+}
+
+div:hover {
+    border: 13px;
+}
+div::after {
+    content: "*";
+}
+div::before {
+    color: blue;
+    content: "*";
+}
+div:hover::before {
+    color:blanchedalmond;
+    font-weight: bolder;
+    font-size: larger;
+    content: "==>";
+}
+form {
+    background-color: beige;
+}
+svg {
+    
+    background-color: lightgray;
+    width: "300px";
+}
+line#ln {
+    stroke-width: 4px;
+    stroke: red;
+}
